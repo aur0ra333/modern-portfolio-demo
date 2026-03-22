@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Portfolio - 个人作品集</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 动态背景 -->
+    <div class="animated-bg">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <!-- 导航栏 -->
+    <nav class="navbar glass">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">✨</span>
+                <span class="logo-text">Portfolio</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">首页</a></li>
+                <li><a href="#about" class="nav-link">关于</a></li>
+                <li><a href="#skills" class="nav-link">技能</a></li>
+                <li><a href="#projects" class="nav-link">项目</a></li>
+                <li><a href="#contact" class="nav-link">联系</a></li>
+            </ul>
+            <button class="theme-toggle" id="theme-toggle">
+                <span class="icon">🌙</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 英雄区域 -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-badge glass">
+                <span class="badge-dot"></span>
+                <span>Available for work</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="greeting">你好，我是</span>
+                <span class="name-gradient">张三</span>
+            </h1>
+            <p class="hero-subtitle typing-text">
+                <span id="typing"></span><span class="cursor">|</span>
+            </p>
+            <p class="hero-description">
+                一名热爱创造的全栈开发者，专注于构建出色的 Web 应用和用户体验。
+                将创意转化为代码，让想法成为现实。
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary btn-glow">
+                    <span>查看项目</span>
+                    <span class="btn-icon">→</span>
+                </a>
+                <a href="#contact" class="btn btn-secondary glass">
+                    <span>联系我</span>
+                </a>
+            </div>
+            
+            <div class="hero-stats">
+                <div class="stat-card glass">
+                    <div class="stat-number" data-count="50">0</div>
+                    <div class="stat-label">完成项目</div>
+                </div>
+                <div class="stat-card glass">
+                    <div class="stat-number" data-count="5">0</div>
+                    <div class="stat-label">年经验</div>
+                </div>
+                <div class="stat-card glass">
+                    <div class="stat-number" data-count="100">0</div>
+                    <div class="stat-label">满意客户</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-visual">
+            <div class="code-window glass">
+                <div class="window-header">
+                    <div class="window-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <span class="window-title">developer.js</span>
+                </div>
+                <pre class="window-content"><code><span class="keyword">const</span> <span class="variable">developer</span> = {
+  <span class="key">name</span>: <span class="string">'张三'</span>,
+  <span class="key">role</span>: <span class="string">'Full Stack Developer'</span>,
+  <span class="key">skills</span>: [
+    <span class="string">'JavaScript'</span>,
+    <span class="string">'React'</span>,
+    <span class="string">'Node.js'</span>,
+    <span class="string">'Python'</span>
+  ],
+  <span class="key">hardWorker</span>: <span class="boolean">true</span>,
+  <span class="key">problemSolver</span>: <span class="boolean">true</span>,
+  <span class="key">hireable</span>: <span class="boolean">true</span>
+};</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我 -->
+    <section id="about" class="section">
+        <div class="section-container">
+            <h2 class="section-title">
+                <span class="title-icon">👨‍💻</span>
+                <span class="title-text">关于我</span>
+            </h2>
+            <div class="about-grid">
+                <div class="about-content">
+                    <h3 class="about-heading"> passionate about creating impactful solutions</h3>
+                    <p class="about-text">
+                        我是一名全栈开发者，拥有 5 年的 Web 开发经验。热衷于学习新技术，
+                        解决复杂问题，并创造优秀的用户体验。
+                    </p>
+                    <p class="about-text">
+                        我相信代码不仅仅是工具，更是改变世界的力量。每一个项目都是一次
+                        创造价值的机会，每一次挑战都是成长的机会。
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <span class="highlight-icon">🎯</span>
+                            <span>注重细节</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">💡</span>
+                            <span>持续学习</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">🤝</span>
+                            <span>团队协作</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">⚡</span>
+                            <span>高效交付</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-frame glass">
+                        <div class="avatar-placeholder">👨‍💻</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技能栈 -->
+    <section id="skills" class="section">
+        <div class="section-container">
+            <h2 class="section-title">
+                <span class="title-icon">🚀</span>
+                <span class="title-text">技术栈</span>
+            </h2>
+            <div class="skills-grid">
+                <div class="skill-category glass">
+                    <div class="category-icon">🎨</div>
+                    <h3>前端开发</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Vue.js</span>
+                        <span class="skill-tag">TypeScript</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category glass">
+                    <div class="category-icon">⚙️</div>
+                    <h3>后端开发</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Django</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category glass">
+                    <div class="category-icon">🛠️</div>
+                    <h3>工具 & 其他</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">Agile</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目展示 -->
+    <section id="projects" class="section">
+        <div class="section-container">
+            <h2 class="section-title">
+                <span class="title-icon">💼</span>
+                <span class="title-text">精选项目</span>
+            </h2>
+            
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="web">Web 应用</button>
+                <button class="filter-btn" data-filter="mobile">移动端</button>
+                <button class="filter-btn" data-filter="fullstack">全栈</button>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card glass" data-category="fullstack">
+                    <div class="project-image">
+                        <div class="project-icon">🛒</div>
+                        <div class="project-overlay">
+                            <a href="#" class="btn-view-project">查看详情</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">电商平台</h3>
+                        <p class="project-description">
+                            完整的电商系统，包含商品管理、购物车、订单处理、支付集成等功能
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">Stripe</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card glass" data-category="web">
+                    <div class="project-image">
+                        <div class="project-icon">📊</div>
+                        <div class="project-overlay">
+                            <a href="#" class="btn-view-project">查看详情</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">数据分析仪表板</h3>
+                        <p class="project-description">
+                            企业级数据可视化平台，实时数据监控、报表生成、数据导出
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">D3.js</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card glass" data-category="mobile">
+                    <div class="project-image">
+                        <div class="project-icon">📱</div>
+                        <div class="project-overlay">
+                            <a href="#" class="btn-view-project">查看详情</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">社交应用</h3>
+                        <p class="project-description">
+                            移动端社交应用，支持即时通讯、动态分享、位置服务
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">React Native</span>
+                            <span class="tag">Firebase</span>
+                            <span class="tag">Redux</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card glass" data-category="fullstack">
+                    <div class="project-image">
+                        <div class="project-icon">🎓</div>
+                        <div class="project-overlay">
+                            <a href="#" class="btn-view-project">查看详情</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">在线教育平台</h3>
+                        <p class="project-description">
+                            在线学习管理系统，支持课程管理、视频播放、在线测试、证书颁发
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Next.js</span>
+                            <span class="tag">Prisma</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">AWS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <section id="contact" class="section">
+        <div class="section-container">
+            <h2 class="section-title">
+                <span class="title-icon">📬</span>
+                <span class="title-text">联系我</span>
+            </h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3 class="contact-heading">让我们开始合作吧！</h3>
+                    <p class="contact-text">
+                        无论是全职工作、兼职项目，还是技术咨询，
+                        我都乐意与你交流。
+                    </p>
+                    <div class="contact-links">
+                        <a href="mailto:your.email@example.com" class="contact-link glass">
+                            <span class="link-icon">📧</span>
+                            <span>your.email@example.com</span>
+                        </a>
+                        <a href="https://github.com/yourusername" target="_blank" class="contact-link glass">
+                            <span class="link-icon">💼</span>
+                            <span>github.com/yourusername</span>
+                        </a>
+                        <a href="https://linkedin.com/in/yourusername" target="_blank" class="contact-link glass">
+                            <span class="link-icon">💼</span>
+                            <span>linkedin.com/in/yourusername</span>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form glass" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">姓名</label>
+                        <input type="text" id="name" name="name" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">邮箱</label>
+                        <input type="email" id="email" name="email" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="message">消息</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-glow btn-full">
+                        <span>发送消息</span>
+                        <span class="btn-icon">→</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer glass">
+        <div class="footer-content">
+            <p>&copy; 2026 张三。All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" class="social-link">GitHub</a>
+                <a href="#" class="social-link">LinkedIn</a>
+                <a href="#" class="social-link">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
