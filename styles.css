@@ -4,11 +4,11 @@
 
 :root {
     /* 配色方案 */
-    --primary: #6366f1;
-    --primary-dark: #4f46e5;
-    --primary-light: #818cf8;
-    --secondary: #ec4899;
-    --accent: #06b6d4;
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --primary-light: #60a5fa;
+    --secondary: #10b981;
+    --accent: #0891b2;
     
     /* 深色主题 */
     --bg-dark: #0f172a;
@@ -25,15 +25,15 @@
     --border-light: rgba(0, 0, 0, 0.08);
     
     /* 渐变 */
-    --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-    --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-    --gradient-4: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    --gradient-1: linear-gradient(135deg, #2563eb 0%, #0891b2 100%);
+    --gradient-2: linear-gradient(135deg, #334155 0%, #0f172a 100%);
+    --gradient-3: linear-gradient(135deg, #0ea5e9 0%, #10b981 100%);
+    --gradient-4: linear-gradient(135deg, #16a34a 0%, #0891b2 100%);
     
     /* 玻璃态效果 */
-    --glass-bg: rgba(255, 255, 255, 0.05);
-    --glass-border: rgba(255, 255, 255, 0.1);
-    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    --glass-bg: rgba(15, 23, 42, 0.74);
+    --glass-border: rgba(148, 163, 184, 0.2);
+    --glass-shadow: 0 18px 48px rgba(0, 0, 0, 0.22);
     
     /* 动画 */
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -80,9 +80,9 @@ body {
 .gradient-orb {
     position: absolute;
     border-radius: 50%;
-    filter: blur(80px);
-    opacity: 0.5;
-    animation: float 20s infinite ease-in-out;
+    filter: blur(110px);
+    opacity: 0.16;
+    animation: float 24s infinite ease-in-out;
 }
 
 .orb-1 {
@@ -167,7 +167,17 @@ body {
 }
 
 .logo-icon {
-    font-size: 1.8rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: rgba(37, 99, 235, 0.16);
+    border: 1px solid rgba(96, 165, 250, 0.3);
+    color: var(--primary-light);
+    font-size: 1rem;
+    font-weight: 700;
 }
 
 .nav-menu {

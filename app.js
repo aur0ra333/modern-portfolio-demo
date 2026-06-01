@@ -3,10 +3,10 @@
 // ====================
 
 const typingTexts = [
-    'Full Stack Developer',
-    'UI/UX Designer',
-    'Problem Solver',
-    'Continuous Learner'
+    'Web Developer',
+    'Java / Spring Boot',
+    'Vue / React',
+    'Computer Science Student'
 ];
 
 let textIndex = 0;
@@ -52,6 +52,7 @@ function animateNumbers() {
     
     statNumbers.forEach(stat => {
         const target = parseInt(stat.getAttribute('data-count'));
+        const suffix = stat.getAttribute('data-suffix') || '';
         const duration = 2000;
         const increment = target / (duration / 16);
         let current = 0;
@@ -59,7 +60,7 @@ function animateNumbers() {
         const timer = setInterval(() => {
             current += increment;
             if (current >= target) {
-                stat.textContent = target + '+';
+                stat.textContent = target + suffix;
                 clearInterval(timer);
             } else {
                 stat.textContent = Math.floor(current);
@@ -197,8 +198,8 @@ contactForm.addEventListener('submit', (e) => {
     const formData = new FormData(contactForm);
     const data = Object.fromEntries(formData);
     
-    // 显示成功消息
-    alert('感谢你的消息！我会尽快回复。');
+    // 静态页面演示表单，不会真正发送邮件。
+    alert('这是前端演示表单，暂未接入邮件发送。可以通过页面上的邮箱或 GitHub 联系我。');
     contactForm.reset();
     
     // 这里可以添加发送到后端的代码
@@ -247,4 +248,4 @@ window.addEventListener('scroll', () => {
     }
 });
 
-console.log('🚀 Portfolio loaded successfully!');
+console.log('Portfolio loaded successfully.');
