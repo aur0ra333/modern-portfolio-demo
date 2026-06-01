@@ -89,22 +89,9 @@ if (heroStats) {
 // ====================
 
 const themeToggle = document.getElementById('theme-toggle');
-let isDarkTheme = true;
-
-themeToggle.addEventListener('click', () => {
-    isDarkTheme = !isDarkTheme;
-    const icon = themeToggle.querySelector('.icon');
-    
-    if (isDarkTheme) {
-        document.body.style.setProperty('--bg-dark', '#0f172a');
-        document.body.style.setProperty('--text-primary', '#f1f5f9');
-        icon.textContent = '🌙';
-    } else {
-        document.body.style.setProperty('--bg-dark', '#f8fafc');
-        document.body.style.setProperty('--text-primary', '#1e293b');
-        icon.textContent = '☀️';
-    }
-});
+if (themeToggle) {
+    themeToggle.setAttribute('hidden', '');
+}
 
 // ====================
 // 平滑滚动
@@ -230,22 +217,6 @@ document.querySelectorAll('.skill-category, .project-card, .stat-card').forEach(
     el.style.transform = 'translateY(20px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     scrollObserver.observe(el);
-});
-
-// ====================
-// 导航栏滚动效果
-// ====================
-
-const navbar = document.querySelector('.navbar');
-
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(15, 23, 42, 0.95)';
-        navbar.style.backdropFilter = 'blur(10px)';
-    } else {
-        navbar.style.background = 'transparent';
-        navbar.style.backdropFilter = 'none';
-    }
 });
 
 console.log('Portfolio loaded successfully.');
