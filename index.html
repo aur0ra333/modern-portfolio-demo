@@ -52,7 +52,7 @@
             </p>
             <p class="hero-description">
                 计算机科学与技术本科，关注 Web 前端、Java 后端和数据库设计。
-                这里整理了几个可以在线打开的练习项目，方便查看功能和代码实现。
+                这里把 6 个在线项目统一整理成作品集，按主项目、工具项目、内容展示和产品原型分层展示。
             </p>
             <div class="hero-buttons">
                 <a href="#projects" class="btn btn-primary btn-glow">
@@ -152,7 +152,7 @@
                     </p>
                     <p class="about-text">
                         这些项目以静态部署为主，重点展示页面结构、交互逻辑、数据渲染、
-                        本地存储和基础工程化能力。
+                        本地存储、图表分析和产品原型表达能力。
                     </p>
                     <div class="about-highlights">
                         <div class="highlight-item">
@@ -242,22 +242,23 @@
         <div class="section-container">
             <h2 class="section-title">
                 <span class="title-icon">💼</span>
-                <span class="title-text">主项目与练习项目</span>
+                <span class="title-text">在线作品集</span>
             </h2>
             <p class="section-lead">
-                主项目优先展示能讲清楚业务流程和数据处理的工具型应用；小练习用于补充前端交互和页面实现能力。
+                主项目用于展示业务流程和数据处理能力；工具项目补充本地状态管理和表单交互；内容展示与产品原型用于说明页面组织和需求表达。
             </p>
             
             <div class="projects-filter">
                 <button class="filter-btn active" data-filter="all">全部</button>
-                <button class="filter-btn" data-filter="web">Web 应用</button>
-                <button class="filter-btn" data-filter="mobile">移动端</button>
-                <button class="filter-btn" data-filter="fullstack">前后端</button>
+                <button class="filter-btn" data-filter="primary">主项目</button>
+                <button class="filter-btn" data-filter="tool">工具项目</button>
+                <button class="filter-btn" data-filter="content">内容展示</button>
+                <button class="filter-btn" data-filter="prototype">产品原型</button>
             </div>
             
             <div class="projects-grid">
                 <!-- 重点项目：Markdown 编辑器 -->
-                <div class="project-card glass featured" data-category="fullstack">
+                <div class="project-card glass featured" data-category="primary">
                     <div class="project-badge">重点项目</div>
                     <div class="project-image">
                         <div class="project-mockup editor-mockup">
@@ -314,7 +315,7 @@
                 </div>
                 
                 <!-- 项目 2：数据可视化仪表板 -->
-                <div class="project-card glass featured" data-category="web">
+                <div class="project-card glass featured" data-category="primary">
                     <div class="project-badge">分析项目</div>
                     <div class="project-image">
                         <div class="project-mockup dashboard-mockup">
@@ -347,7 +348,7 @@
                 </div>
                 
                 <!-- 项目 3：个人博客系统 -->
-                <div class="project-card glass" data-category="web">
+                <div class="project-card glass" data-category="content">
                     <div class="project-image">
                         <div class="project-mockup blog-mockup">
                             <div class="post-line wide"></div>
@@ -373,8 +374,8 @@
                     </div>
                 </div>
                 
-                <!-- 项目 4：智能待办事项 -->
-                <div class="project-card glass" data-category="web">
+                <!-- 项目 4：任务看板 -->
+                <div class="project-card glass" data-category="tool">
                     <div class="project-image">
                         <div class="project-mockup todo-mockup">
                             <div class="todo-item done"></div>
@@ -388,20 +389,21 @@
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">待办事项应用</h3>
+                        <h3 class="project-title">任务看板</h3>
                         <p class="project-description">
-                            任务管理练习项目，支持优先级、完成状态、筛选和 LocalStorage 持久化。
+                            轻量任务管理工具，支持状态流转、截止日期、搜索筛选、分类统计和 CSV 导出。
                         </p>
                         <div class="project-tags">
                             <span class="tag">LocalStorage</span>
                             <span class="tag">JavaScript</span>
-                            <span class="tag">分类管理</span>
+                            <span class="tag">任务筛选</span>
+                            <span class="tag">CSV 导出</span>
                         </div>
                     </div>
                 </div>
                 
-                <!-- 项目 5：天气预报应用 -->
-                <div class="project-card glass" data-category="web">
+                <!-- 项目 5：城市天气观察台 -->
+                <div class="project-card glass" data-category="tool">
                     <div class="project-image">
                         <div class="project-mockup weather-mockup">
                             <div class="weather-temp">24°</div>
@@ -414,14 +416,46 @@
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">天气预报应用</h3>
+                        <h3 class="project-title">城市天气观察台</h3>
                         <p class="project-description">
-                            天气查询练习项目，支持城市搜索、天气详情、五日预报展示和错误提示。
+                            天气数据展示工具，支持城市查询、单位切换、舒适度计算、五日趋势和城市对比。
                         </p>
                         <div class="project-tags">
-                            <span class="tag">Geolocation API</span>
+                            <span class="tag">数据渲染</span>
                             <span class="tag">LocalStorage</span>
-                            <span class="tag">天气 API</span>
+                            <span class="tag">响应式布局</span>
+                            <span class="tag">单位换算</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 项目 6：任务协作实验室 -->
+                <div class="project-card glass" data-category="prototype">
+                    <div class="project-image">
+                        <div class="project-mockup lab-mockup">
+                            <div class="lab-top"><span></span><span></span></div>
+                            <div class="lab-list">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="lab-footer"><span></span><span></span><span></span></div>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="https://aur0ra333.github.io/ai-hire-humans/" target="_blank" class="btn-view-project">在线演示</a>
+                            <a href="https://github.com/aur0ra333/ai-hire-humans" target="_blank" class="btn-view-project">GitHub</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">任务协作实验室</h3>
+                        <p class="project-description">
+                            产品原型项目，围绕任务发布、筛选搜索、详情弹窗、交付记录和质量标准组织页面。
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">产品原型</span>
+                            <span class="tag">筛选搜索</span>
+                            <span class="tag">弹窗交互</span>
+                            <span class="tag">静态部署</span>
                         </div>
                     </div>
                 </div>
@@ -483,6 +517,7 @@
                 <a href="https://github.com/aur0ra333" class="social-link">GitHub</a>
                 <a href="https://aur0ra333.github.io/markdown-editor/" class="social-link">Markdown 编辑器</a>
                 <a href="https://aur0ra333.github.io/data-dashboard/" class="social-link">数据看板</a>
+                <a href="https://aur0ra333.github.io/ai-hire-humans/" class="social-link">任务协作实验室</a>
             </div>
         </div>
     </footer>

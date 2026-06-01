@@ -3,10 +3,10 @@
 // ====================
 
 const typingTexts = [
-    'Web Developer',
+    'Web Frontend Projects',
     'Java / Spring Boot',
-    'Vue / React',
-    'Computer Science Student'
+    'Data Dashboard',
+    'Task Board / Product Prototype'
 ];
 
 let textIndex = 0;
