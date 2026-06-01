@@ -566,6 +566,14 @@ body {
     justify-content: center;
 }
 
+.section-lead {
+    max-width: 760px;
+    margin: -1.5rem auto 2.5rem;
+    color: var(--text-secondary);
+    text-align: center;
+    line-height: 1.8;
+}
+
 .title-icon {
     font-size: 3rem;
 }

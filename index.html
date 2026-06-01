@@ -242,8 +242,11 @@
         <div class="section-container">
             <h2 class="section-title">
                 <span class="title-icon">💼</span>
-                <span class="title-text">精选项目</span>
+                <span class="title-text">主项目与练习项目</span>
             </h2>
+            <p class="section-lead">
+                主项目优先展示能讲清楚业务流程和数据处理的工具型应用；小练习用于补充前端交互和页面实现能力。
+            </p>
             
             <div class="projects-filter">
                 <button class="filter-btn active" data-filter="all">全部</button>
@@ -283,13 +286,13 @@
                             <span class="featured-tag">在线可用</span>
                         </div>
                         <p class="project-description">
-                            面向笔记和文档整理的编辑器，支持实时预览、格式整理、历史版本和多格式导出。
+                            面向笔记和项目文档整理的工作台，支持本地文档库、文件导入、搜索替换、目录跳转、历史版本和多格式导出。
                         </p>
                         <ul class="project-features">
                             <li>Marked.js 实时解析 Markdown</li>
-                            <li>LocalStorage 保存最近 20 个历史版本</li>
-                            <li>整理空行、插入模板、深浅色切换</li>
-                            <li>支持 MD / HTML / PDF 导出</li>
+                            <li>LocalStorage 管理文档库、草稿和版本历史</li>
+                            <li>支持本地 .md/.txt 导入、搜索替换、格式整理</li>
+                            <li>根据标题生成目录，导出 MD / HTML / PDF</li>
                         </ul>
                         <div class="project-tags">
                             <span class="tag highlight">JavaScript ES6+</span>
@@ -311,7 +314,8 @@
                 </div>
                 
                 <!-- 项目 2：数据可视化仪表板 -->
-                <div class="project-card glass" data-category="web">
+                <div class="project-card glass featured" data-category="web">
+                    <div class="project-badge">分析项目</div>
                     <div class="project-image">
                         <div class="project-mockup dashboard-mockup">
                             <div class="metric-row"><span></span><span></span><span></span></div>
@@ -326,12 +330,18 @@
                     <div class="project-content">
                         <h3 class="project-title">数据可视化仪表板</h3>
                         <p class="project-description">
-                            后台首页练习项目，包含指标卡、趋势图、用户分布、订单状态和最近订单表格。
+                            运营分析工具，支持时间范围和渠道筛选，KPI、图表和订单列表会根据筛选条件联动更新。
                         </p>
+                        <ul class="project-features">
+                            <li>基于模拟订单数据计算活跃用户、成交金额、订单数量和 SKU 数</li>
+                            <li>Chart.js 渲染销售趋势、地区分布、订单状态和品类金额</li>
+                            <li>支持渠道筛选、时间范围切换、订单展开和 CSV 导出</li>
+                        </ul>
                         <div class="project-tags">
                             <span class="tag">Chart.js</span>
                             <span class="tag">JavaScript</span>
                             <span class="tag">响应式</span>
+                            <span class="tag">CSV 导出</span>
                         </div>
                     </div>
                 </div>
