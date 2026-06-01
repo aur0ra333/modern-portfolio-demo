@@ -437,52 +437,111 @@ body {
     }
 }
 
-.code-window {
-    border-radius: 12px;
-    overflow: hidden;
+.profile-board {
+    border-radius: 24px;
+    padding: 2rem;
 }
 
-.window-header {
+.profile-header {
     display: flex;
     align-items: center;
     gap: 1rem;
-    padding: 1rem 1.5rem;
-    background: rgba(0, 0, 0, 0.3);
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
 }
 
-.window-dots {
-    display: flex;
-    gap: 0.5rem;
+.profile-avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 20px;
+    display: grid;
+    place-items: center;
+    background: rgba(37, 99, 235, 0.18);
+    border: 1px solid rgba(96, 165, 250, 0.35);
+    color: var(--primary-light);
+    font-size: 2rem;
+    font-weight: 800;
 }
 
-.dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
+.profile-kicker,
+.card-label {
+    color: var(--primary-light);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 
-.dot.red { background: #ff5f56; }
-.dot.yellow { background: #ffbd2e; }
-.dot.green { background: #27c93f; }
+.profile-header h2 {
+    font-size: 1.5rem;
+    margin: 0.2rem 0;
+}
 
-.window-title {
+.profile-header span,
+.profile-tile span,
+.profile-tile small,
+.timeline-row p {
     color: var(--text-secondary);
-    font-size: 0.9rem;
 }
 
-.window-content {
-    padding: 1.5rem;
-    overflow-x: auto;
-    font-family: 'Courier New', monospace;
-    font-size: 0.9rem;
-    line-height: 1.8;
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 1.25rem 0;
 }
 
-.keyword { color: #ec4899; }
-.variable { color: #6366f1; }
-.string { color: #10b981; }
-.boolean { color: #f59e0b; }
-.key { color: #94a3b8; }
+.profile-tile {
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: rgba(15, 23, 42, 0.36);
+}
+
+.profile-tile strong {
+    display: block;
+    margin: 0.4rem 0 0.2rem;
+}
+
+.timeline-card {
+    display: grid;
+    gap: 1rem;
+    padding: 1.25rem;
+    border-radius: 18px;
+    background: rgba(15, 23, 42, 0.42);
+    border: 1px solid var(--border);
+}
+
+.timeline-row {
+    display: grid;
+    grid-template-columns: 16px 1fr;
+    gap: 0.8rem;
+}
+
+.timeline-dot {
+    width: 10px;
+    height: 10px;
+    margin-top: 0.4rem;
+    border-radius: 50%;
+    background: var(--primary-light);
+    box-shadow: 0 0 0 5px rgba(37, 99, 235, 0.14);
+}
+
+.profile-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 1.25rem;
+}
+
+.profile-tags span {
+    padding: 0.45rem 0.75rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    font-size: 0.82rem;
+}
 
 /* ====================
    Section 通用样式
@@ -555,16 +614,26 @@ body {
     font-size: 1.2rem;
 }
 
-.image-frame {
+.experience-card {
+    padding: 2rem;
     border-radius: 20px;
-    padding: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-.avatar-placeholder {
-    font-size: 10rem;
+.experience-card h3 {
+    margin: 0.6rem 0;
+    font-size: 1.4rem;
+}
+
+.experience-card p {
+    color: var(--text-secondary);
+    margin-bottom: 1.2rem;
+}
+
+.experience-card ul {
+    display: grid;
+    gap: 0.8rem;
+    color: var(--text-secondary);
+    padding-left: 1.1rem;
 }
 
 /* ====================
@@ -758,8 +827,138 @@ body {
     overflow: hidden;
 }
 
-.project-icon {
-    font-size: 5rem;
+.project-mockup {
+    width: min(82%, 420px);
+    min-height: 160px;
+    padding: 1rem;
+    border-radius: 18px;
+    background: rgba(15, 23, 42, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    box-shadow: 0 18px 50px rgba(15, 23, 42, 0.28);
+}
+
+.mockup-toolbar,
+.metric-row,
+.tag-row,
+.weather-days {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.mockup-toolbar span,
+.metric-row span,
+.tag-row span,
+.weather-days span {
+    display: block;
+    height: 10px;
+    border-radius: 999px;
+    background: rgba(96, 165, 250, 0.55);
+}
+
+.mockup-toolbar span { width: 44px; }
+
+.mockup-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.mockup-split > div {
+    min-height: 108px;
+    padding: 0.9rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.07);
+}
+
+.mockup-split b,
+.mockup-split h4,
+.weather-temp {
+    color: #fff;
+}
+
+.mockup-split p,
+.blog-mockup .post-line,
+.weather-lines span {
+    display: block;
+    height: 9px;
+    margin-top: 0.8rem;
+    border-radius: 999px;
+    background: rgba(226, 232, 240, 0.35);
+}
+
+.chart-line {
+    height: 64px;
+    margin: 1rem 0;
+    border-radius: 14px;
+    background: linear-gradient(135deg, rgba(96, 165, 250, 0.35), rgba(16, 185, 129, 0.2));
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.metric-row span { flex: 1; height: 30px; }
+
+.chart-bars {
+    display: flex;
+    align-items: end;
+    gap: 0.6rem;
+    height: 54px;
+}
+
+.chart-bars span {
+    flex: 1;
+    border-radius: 8px 8px 0 0;
+    background: rgba(96, 165, 250, 0.55);
+}
+
+.chart-bars span:nth-child(1) { height: 36%; }
+.chart-bars span:nth-child(2) { height: 76%; }
+.chart-bars span:nth-child(3) { height: 52%; }
+.chart-bars span:nth-child(4) { height: 88%; }
+
+.blog-mockup .post-line { width: 70%; }
+.blog-mockup .post-line.wide { width: 94%; height: 18px; }
+.tag-row span { width: 54px; margin-top: 1rem; }
+
+.post-card-mini {
+    height: 54px;
+    margin-top: 1rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.todo-item {
+    height: 26px;
+    margin-bottom: 0.8rem;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-left: 4px solid rgba(96, 165, 250, 0.8);
+}
+
+.todo-item.done { opacity: 0.65; border-left-color: #10b981; }
+.todo-item.high { border-left-color: #f59e0b; }
+
+.todo-meter {
+    height: 12px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #10b981 64%, rgba(255, 255, 255, 0.12) 64%);
+}
+
+.weather-temp {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.weather-lines span {
+    width: 76%;
+}
+
+.weather-lines span:nth-child(2) { width: 58%; }
+.weather-lines span:nth-child(3) { width: 42%; }
+.weather-days span {
+    flex: 1;
+    height: 42px;
+    margin-top: 1rem;
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .project-overlay {

@@ -81,27 +81,57 @@
         </div>
         
         <div class="hero-visual">
-            <div class="code-window glass">
-                <div class="window-header">
-                    <div class="window-dots">
-                        <span class="dot red"></span>
-                        <span class="dot yellow"></span>
-                        <span class="dot green"></span>
+            <div class="profile-board glass">
+                <div class="profile-header">
+                    <div class="profile-avatar">申</div>
+                    <div>
+                        <p class="profile-kicker">Henan Normal University</p>
+                        <h2>计算机科学与技术</h2>
+                        <span>2022.09 - 2026.06</span>
                     </div>
-                    <span class="window-title">developer.js</span>
                 </div>
-                <pre class="window-content"><code><span class="keyword">const</span> <span class="variable">developer</span> = {
-  <span class="key">name</span>: <span class="string">'申浩天'</span>,
-  <span class="key">role</span>: <span class="string">'CS Student'</span>,
-  <span class="key">skills</span>: [
-    <span class="string">'JavaScript'</span>,
-    <span class="string">'Vue / React'</span>,
-    <span class="string">'Spring Boot'</span>,
-    <span class="string">'MySQL'</span>
-  ],
-  <span class="key">problemSolver</span>: <span class="boolean">true</span>,
-  <span class="key">keepsLearning</span>: <span class="boolean">true</span>
-};</code></pre>
+                <div class="profile-grid">
+                    <div class="profile-tile">
+                        <span>实习经历</span>
+                        <strong>正方软件</strong>
+                        <small>教务系统前端开发</small>
+                    </div>
+                    <div class="profile-tile">
+                        <span>主要求职</span>
+                        <strong>Java / 前端</strong>
+                        <small>也可承担全栈协作</small>
+                    </div>
+                </div>
+                <div class="timeline-card">
+                    <div class="timeline-row">
+                        <span class="timeline-dot"></span>
+                        <div>
+                            <strong>课程表与后台页面</strong>
+                            <p>Vue / React、Element UI、Axios</p>
+                        </div>
+                    </div>
+                    <div class="timeline-row">
+                        <span class="timeline-dot"></span>
+                        <div>
+                            <strong>数据可视化</strong>
+                            <p>ECharts 图表、趋势分析、状态看板</p>
+                        </div>
+                    </div>
+                    <div class="timeline-row">
+                        <span class="timeline-dot"></span>
+                        <div>
+                            <strong>毕业设计</strong>
+                            <p>Spring Boot 在线电影播放平台</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-tags">
+                    <span>JavaScript</span>
+                    <span>Vue.js</span>
+                    <span>Spring Boot</span>
+                    <span>MySQL</span>
+                    <span>Git</span>
+                </div>
             </div>
         </div>
     </section>
@@ -144,8 +174,15 @@
                     </div>
                 </div>
                 <div class="about-image">
-                    <div class="image-frame glass">
-                        <div class="avatar-placeholder">👨‍💻</div>
+                    <div class="experience-card glass">
+                        <span class="card-label">Internship</span>
+                        <h3>杭州市正方软件股份有限公司</h3>
+                        <p>实施工程师（实习生） / 2025.03 - 2025.06</p>
+                        <ul>
+                            <li>参与高校教务管理系统前端页面开发</li>
+                            <li>完成课程表、个人中心和后台面板等模块</li>
+                            <li>处理 Axios 请求封装、Token 认证和图表展示</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -220,7 +257,21 @@
                 <div class="project-card glass featured" data-category="fullstack">
                     <div class="project-badge">重点项目</div>
                     <div class="project-image">
-                        <div class="project-icon">📝</div>
+                        <div class="project-mockup editor-mockup">
+                            <div class="mockup-toolbar"><span></span><span></span><span></span></div>
+                            <div class="mockup-split">
+                                <div>
+                                    <b># Markdown</b>
+                                    <p>实时预览</p>
+                                    <p>历史版本</p>
+                                </div>
+                                <div>
+                                    <h4>Preview</h4>
+                                    <p></p>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
                         <div class="project-overlay">
                             <a href="https://aur0ra333.github.io/markdown-editor/" target="_blank" class="btn-view-project">在线演示</a>
                             <a href="https://github.com/aur0ra333/markdown-editor" target="_blank" class="btn-view-project">GitHub</a>
@@ -262,7 +313,11 @@
                 <!-- 项目 2：数据可视化仪表板 -->
                 <div class="project-card glass" data-category="web">
                     <div class="project-image">
-                        <div class="project-icon">📊</div>
+                        <div class="project-mockup dashboard-mockup">
+                            <div class="metric-row"><span></span><span></span><span></span></div>
+                            <div class="chart-line"></div>
+                            <div class="chart-bars"><span></span><span></span><span></span><span></span></div>
+                        </div>
                         <div class="project-overlay">
                             <a href="https://aur0ra333.github.io/data-dashboard/" target="_blank" class="btn-view-project">在线演示</a>
                             <a href="https://github.com/aur0ra333/data-dashboard" target="_blank" class="btn-view-project">GitHub</a>
@@ -284,7 +339,12 @@
                 <!-- 项目 3：个人博客系统 -->
                 <div class="project-card glass" data-category="web">
                     <div class="project-image">
-                        <div class="project-icon">📰</div>
+                        <div class="project-mockup blog-mockup">
+                            <div class="post-line wide"></div>
+                            <div class="post-line"></div>
+                            <div class="tag-row"><span></span><span></span><span></span></div>
+                            <div class="post-card-mini"></div>
+                        </div>
                         <div class="project-overlay">
                             <a href="https://aur0ra333.github.io/portfolio-blog/" target="_blank" class="btn-view-project">在线演示</a>
                             <a href="https://github.com/aur0ra333/portfolio-blog" target="_blank" class="btn-view-project">GitHub</a>
@@ -306,7 +366,12 @@
                 <!-- 项目 4：智能待办事项 -->
                 <div class="project-card glass" data-category="web">
                     <div class="project-image">
-                        <div class="project-icon">✅</div>
+                        <div class="project-mockup todo-mockup">
+                            <div class="todo-item done"></div>
+                            <div class="todo-item"></div>
+                            <div class="todo-item high"></div>
+                            <div class="todo-meter"></div>
+                        </div>
                         <div class="project-overlay">
                             <a href="https://aur0ra333.github.io/smart-todo-app/" target="_blank" class="btn-view-project">在线演示</a>
                             <a href="https://github.com/aur0ra333/smart-todo-app" target="_blank" class="btn-view-project">GitHub</a>
@@ -328,7 +393,11 @@
                 <!-- 项目 5：天气预报应用 -->
                 <div class="project-card glass" data-category="web">
                     <div class="project-image">
-                        <div class="project-icon">🌤️</div>
+                        <div class="project-mockup weather-mockup">
+                            <div class="weather-temp">24°</div>
+                            <div class="weather-lines"><span></span><span></span><span></span></div>
+                            <div class="weather-days"><span></span><span></span><span></span><span></span></div>
+                        </div>
                         <div class="project-overlay">
                             <a href="https://aur0ra333.github.io/weather-app/" target="_blank" class="btn-view-project">在线演示</a>
                             <a href="https://github.com/aur0ra333/weather-app" target="_blank" class="btn-view-project">GitHub</a>
