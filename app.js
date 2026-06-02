@@ -212,7 +212,7 @@ const scrollObserver = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // 观察所有需要动画的元素
-document.querySelectorAll('.skill-category, .project-card, .stat-card').forEach(el => {
+document.querySelectorAll('.skill-category, .project-card, .stat-card, .overview-card, .case-study-card').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
