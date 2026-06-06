@@ -32,8 +32,16 @@ body {
         linear-gradient(180deg, #ffffff 0%, var(--page) 42%),
         var(--page);
     color: var(--ink);
-    font-family: Inter, "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+    font-family: "Source Sans 3", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
     line-height: 1.65;
+}
+
+h1,
+h2,
+h3,
+.logo-text,
+.stat-number {
+    font-family: Chivo, "Source Sans 3", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
 }
 
 a {
@@ -234,15 +242,10 @@ textarea {
 }
 
 .hero-subtitle {
-    min-height: 1.8em;
     margin-bottom: 14px;
-    color: var(--blue);
-    font-size: 1.15rem;
+    color: #184d86;
+    font-size: 1.12rem;
     font-weight: 800;
-}
-
-.cursor {
-    color: var(--blue);
 }
 
 .hero-description {
@@ -582,8 +585,8 @@ textarea {
     justify-content: center;
     margin-bottom: 18px;
     border-radius: 12px;
-    background: var(--blue-soft);
-    color: var(--blue);
+    background: var(--ink);
+    color: #fff;
     font-weight: 900;
 }
 
@@ -663,6 +666,53 @@ textarea {
     color: var(--blue);
     font-size: 0.78rem;
     font-weight: 900;
+}
+
+.inspection-panel {
+    display: grid;
+    grid-template-columns: minmax(260px, 0.75fr) minmax(0, 1.25fr);
+    gap: 20px;
+    margin: 0 0 24px;
+    padding: 22px;
+    border: 1px solid #b9c9dc;
+    border-radius: 18px;
+    background: #f8fbff;
+}
+
+.inspection-panel h3 {
+    margin-bottom: 8px;
+    font-size: 1.24rem;
+}
+
+.inspection-panel p {
+    color: #475467;
+    max-width: 54ch;
+}
+
+.inspection-panel ul {
+    display: grid;
+    gap: 10px;
+    list-style: none;
+}
+
+.inspection-panel li {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 14px;
+    padding: 12px 0;
+    border-bottom: 1px solid #d7e2ee;
+}
+
+.inspection-panel li:last-child {
+    border-bottom: 0;
+}
+
+.inspection-panel strong {
+    color: var(--ink);
+}
+
+.inspection-panel span {
+    color: #475467;
 }
 
 .projects-grid {
@@ -843,16 +893,16 @@ textarea {
 .todo-item {
     height: 26px;
     margin-bottom: 10px;
-    border-left: 4px solid #7aa8ed;
+    border: 1px solid #d6e2ef;
 }
 
 .todo-item.done {
-    border-left-color: var(--green);
+    background: #e8f7f1;
     opacity: 0.72;
 }
 
 .todo-item.high {
-    border-left-color: var(--orange);
+    background: #fff1e8;
 }
 
 .todo-meter {
@@ -894,7 +944,7 @@ textarea {
 
 .lab-list div {
     height: 32px;
-    border-left: 4px solid #7aa8ed;
+    border: 1px solid #d6e2ef;
 }
 
 .lab-footer span {
@@ -1117,7 +1167,8 @@ textarea {
     .skills-grid,
     .projects-grid,
     .overview-grid,
-    .case-study-grid {
+    .case-study-grid,
+    .inspection-panel {
         grid-template-columns: 1fr;
     }
 
@@ -1161,5 +1212,21 @@ textarea {
     .footer-content {
         align-items: flex-start;
         flex-direction: column;
+    }
+
+    .inspection-panel li {
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
     }
 }

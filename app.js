@@ -2,47 +2,6 @@
 // 打字机效果
 // ====================
 
-const typingTexts = [
-    'Web Frontend Projects',
-    'Java / Spring Boot',
-    'Data Dashboard',
-    'Task Board / Product Prototype'
-];
-
-let textIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
-let typingSpeed = 100;
-
-function type() {
-    const currentText = typingTexts[textIndex];
-    const typingElement = document.getElementById('typing');
-    
-    if (isDeleting) {
-        typingElement.textContent = currentText.substring(0, charIndex - 1);
-        charIndex--;
-        typingSpeed = 50;
-    } else {
-        typingElement.textContent = currentText.substring(0, charIndex + 1);
-        charIndex++;
-        typingSpeed = 100;
-    }
-    
-    if (!isDeleting && charIndex === currentText.length) {
-        isDeleting = true;
-        typingSpeed = 2000; // 停顿时间
-    } else if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        textIndex = (textIndex + 1) % typingTexts.length;
-        typingSpeed = 500;
-    }
-    
-    setTimeout(type, typingSpeed);
-}
-
-// 启动打字机效果
-document.addEventListener('DOMContentLoaded', type);
-
 // ====================
 // 数字滚动动画
 // ====================
