@@ -1,55 +1,13 @@
 // ====================
-// 打字机效果
+// 简历下载按钮
 // ====================
 
-// ====================
-// 数字滚动动画
-// ====================
-
-function animateNumbers() {
-    const statNumbers = document.querySelectorAll('.stat-number');
-    
-    statNumbers.forEach(stat => {
-        const target = parseInt(stat.getAttribute('data-count'));
-        const suffix = stat.getAttribute('data-suffix') || '';
-        const duration = 2000;
-        const increment = target / (duration / 16);
-        let current = 0;
-        
-        const timer = setInterval(() => {
-            current += increment;
-            if (current >= target) {
-                stat.textContent = target + suffix;
-                clearInterval(timer);
-            } else {
-                stat.textContent = Math.floor(current);
-            }
-        }, 16);
+const btnResume = document.getElementById('btn-resume');
+if (btnResume) {
+    btnResume.addEventListener('click', (e) => {
+        e.preventDefault();
+        alert('简历文件暂未上传，请通过邮箱 1104557016@qq.com 联系获取。');
     });
-}
-
-// 使用 Intersection Observer 触发数字动画
-const statsObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            animateNumbers();
-            statsObserver.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.5 });
-
-const heroStats = document.querySelector('.hero-stats');
-if (heroStats) {
-    statsObserver.observe(heroStats);
-}
-
-// ====================
-// 主题切换
-// ====================
-
-const themeToggle = document.getElementById('theme-toggle');
-if (themeToggle) {
-    themeToggle.setAttribute('hidden', '');
 }
 
 // ====================
@@ -78,15 +36,14 @@ const navLinks = document.querySelectorAll('.nav-link');
 
 window.addEventListener('scroll', () => {
     let current = '';
-    
+
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
         if (scrollY >= (sectionTop - 200)) {
             current = section.getAttribute('id');
         }
     });
-    
+
     navLinks.forEach(link => {
         link.classList.remove('active');
         if (link.getAttribute('href') === `#${current}`) {
@@ -104,16 +61,14 @@ const projectCards = document.querySelectorAll('.project-card');
 
 filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-        // 更新激活状态
         filterBtns.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-        
+
         const filter = btn.getAttribute('data-filter');
-        
-        // 过滤项目
+
         projectCards.forEach(card => {
             const category = card.getAttribute('data-category');
-            
+
             if (filter === 'all' || category === filter) {
                 card.style.display = 'block';
                 setTimeout(() => {
@@ -132,34 +87,8 @@ filterBtns.forEach(btn => {
 });
 
 // ====================
-// 联系表单
+// 滚动入场动画
 // ====================
-
-const contactForm = document.getElementById('contact-form');
-
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // 获取表单数据
-    const formData = new FormData(contactForm);
-    const data = Object.fromEntries(formData);
-    
-    // 静态页面演示表单，不会真正发送邮件。
-    alert('这是前端演示表单，暂未接入邮件发送。可以通过页面上的邮箱或 GitHub 联系我。');
-    contactForm.reset();
-    
-    // 这里可以添加发送到后端的代码
-    console.log('Form submitted:', data);
-});
-
-// ====================
-// 滚动动画
-// ====================
-
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
 
 const scrollObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -168,14 +97,11 @@ const scrollObserver = new IntersectionObserver((entries) => {
             entry.target.style.transform = 'translateY(0)';
         }
     });
-}, observerOptions);
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-// 观察所有需要动画的元素
 document.querySelectorAll('.skill-category, .project-card, .stat-card, .overview-card, .case-study-card').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     scrollObserver.observe(el);
 });
-
-console.log('Portfolio loaded successfully.');

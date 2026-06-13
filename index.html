@@ -10,13 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- 动态背景 -->
-    <div class="animated-bg">
-        <div class="gradient-orb orb-1"></div>
-        <div class="gradient-orb orb-2"></div>
-        <div class="gradient-orb orb-3"></div>
-    </div>
-
     <!-- 导航栏 -->
     <nav class="navbar glass">
         <div class="nav-container">
@@ -32,9 +25,6 @@
                 <li><a href="#projects" class="nav-link">项目</a></li>
                 <li><a href="#contact" class="nav-link">联系</a></li>
             </ul>
-            <button class="theme-toggle" id="theme-toggle">
-                <span class="icon">🌙</span>
-            </button>
         </div>
     </nav>
 
@@ -61,6 +51,10 @@
                 </a>
                 <a href="#contact" class="btn btn-secondary glass">
                     <span>联系我</span>
+                </a>
+                <a href="#" class="btn btn-outline glass" id="btn-resume" title="简历下载功能开发中">
+                    <span>下载简历</span>
+                    <span class="btn-icon">↓</span>
                 </a>
             </div>
             
@@ -592,20 +586,21 @@
                 <form class="contact-form glass" id="contact-form">
                     <div class="form-group">
                         <label for="name">姓名</label>
-                        <input type="text" id="name" name="name" required />
+                        <input type="text" id="name" name="name" placeholder="您的姓名" />
                     </div>
                     <div class="form-group">
                         <label for="email">邮箱</label>
-                        <input type="email" id="email" name="email" required />
+                        <input type="email" id="email" name="email" placeholder="your@email.com" />
                     </div>
                     <div class="form-group">
                         <label for="message">消息</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <textarea id="message" name="message" rows="5" placeholder="请输入您的留言..."></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-glow btn-full">
-                        <span>发送消息</span>
+                    <a href="mailto:1104557016@qq.com" class="btn btn-primary btn-glow btn-full">
+                        <span>发送邮件</span>
                         <span class="btn-icon">→</span>
-                    </button>
+                    </a>
+                    <p class="form-hint">点击后将通过邮件客户端发送，或直接发送至 1104557016@qq.com</p>
                 </form>
             </div>
         </div>
