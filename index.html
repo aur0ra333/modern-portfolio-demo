@@ -52,7 +52,7 @@
                 <a href="#contact" class="btn btn-secondary glass">
                     <span>联系我</span>
                 </a>
-                <a href="#" class="btn btn-outline glass" id="btn-resume" title="简历下载功能开发中">
+                <a href="resume.html" target="_blank" class="btn btn-outline glass">
                     <span>下载简历</span>
                     <span class="btn-icon">↓</span>
                 </a>
@@ -279,27 +279,27 @@
         <div class="section-container">
             <div class="depth-layout">
                 <div class="depth-copy">
-                    <h2 class="section-title plain-title">不仅仅是链接 —— 每个项目都可实际操作</h2>
+                    <h2 class="section-title plain-title">每个项目都可在线验证</h2>
                     <p class="section-lead">
-                        所有项目均提供在线演示和 GitHub 源码入口，方便直接验证功能完整度、代码质量和交互体验。
+                        所有项目均提供在线演示和 GitHub 源码入口，以下维度可以直接审阅。
                     </p>
                 </div>
                 <div class="depth-board">
                     <div class="depth-row">
-                        <strong>状态管理</strong>
-                        <span>LocalStorage 文档库、任务状态、收藏城市、最近查询。</span>
+                        <strong>功能完整度</strong>
+                        <span>输入、筛选、导出、弹窗、状态切换是否能实际操作。</span>
                     </div>
                     <div class="depth-row">
-                        <strong>数据处理</strong>
-                        <span>订单聚合、KPI 计算、图表联动、CSV 导出和城市趋势生成。</span>
+                        <strong>代码可读性</strong>
+                        <span>README 是否能说明项目目标、运行方式和核心技术点。</span>
                     </div>
                     <div class="depth-row">
-                        <strong>交互完整度</strong>
-                        <span>搜索筛选、详情弹窗、导入导出、表单反馈和响应式布局。</span>
+                        <strong>页面适配</strong>
+                        <span>移动端、桌面端是否保持清晰层级和可读文本。</span>
                     </div>
                     <div class="depth-row">
-                        <strong>项目表达</strong>
-                        <span>README、在线演示、GitHub 源码、项目价值和可讲路径统一。</span>
+                        <strong>技术深度</strong>
+                        <span>状态管理、数据处理、交互完整度、项目表达是否到位。</span>
                     </div>
                 </div>
             </div>
@@ -342,18 +342,6 @@
                     <p>筛选条件驱动 KPI、图表和订单表格联动，适合作为数据可视化和业务分析项目展开。</p>
                     <a href="https://aur0ra333.github.io/data-dashboard/" target="_blank">打开演示</a>
                 </article>
-            </div>
-
-            <div class="inspection-panel">
-                <div>
-                    <h3>项目能力维度</h3>
-                    <p>每个在线项目都提供了演示入口和 GitHub 源码，以下维度可以直接验证。</p>
-                </div>
-                <ul>
-                    <li><strong>功能完整度</strong><span>输入、筛选、导出、弹窗、状态切换是否能实际操作。</span></li>
-                    <li><strong>代码可读性</strong><span>README 是否能说明项目目标、运行方式和核心技术点。</span></li>
-                    <li><strong>页面适配</strong><span>移动端、桌面端是否保持清晰层级和可读文本。</span></li>
-                </ul>
             </div>
             
             <div class="projects-grid">
@@ -398,8 +386,9 @@
                         <div class="project-tags">
                             <span class="tag highlight">JavaScript ES6+</span>
                             <span class="tag">Marked.js</span>
+                            <span class="tag">highlight.js</span>
+                            <span class="tag">Undo/Redo</span>
                             <span class="tag">LocalStorage</span>
-                            <span class="tag">本地存储</span>
                         </div>
                         <div class="project-stats">
                             <div class="stat-item">
@@ -439,9 +428,9 @@
                             <li>支持渠道筛选、时间范围切换、订单展开和 CSV 导出</li>
                         </ul>
                         <div class="project-tags">
-                            <span class="tag">Chart.js</span>
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">响应式</span>
+                            <span class="tag highlight">Chart.js</span>
+                            <span class="tag">数据可视化</span>
+                            <span class="tag">动态筛选</span>
                             <span class="tag">CSV 导出</span>
                         </div>
                     </div>
@@ -467,9 +456,9 @@
                             内容类页面练习项目，支持文章列表、搜索过滤、标签云、分页和文章弹窗。
                         </p>
                         <div class="project-tags">
-                            <span class="tag">JavaScript</span>
+                            <span class="tag highlight">全文搜索</span>
+                            <span class="tag">分页系统</span>
                             <span class="tag">LocalStorage</span>
-                            <span class="tag">UI/UX</span>
                         </div>
                     </div>
                 </div>
@@ -494,9 +483,8 @@
                             轻量任务管理工具，支持状态流转、截止日期、搜索筛选、分类统计和 CSV 导出。
                         </p>
                         <div class="project-tags">
+                            <span class="tag highlight">看板拖拽</span>
                             <span class="tag">LocalStorage</span>
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">任务筛选</span>
                             <span class="tag">CSV 导出</span>
                         </div>
                     </div>
@@ -521,10 +509,10 @@
                             天气数据展示工具，支持城市查询、单位切换、舒适度计算、五日趋势和城市对比。
                         </p>
                         <div class="project-tags">
-                            <span class="tag">数据渲染</span>
+                            <span class="tag highlight">API 集成</span>
+                            <span class="tag">地理定位</span>
+                            <span class="tag">逐小时预报</span>
                             <span class="tag">LocalStorage</span>
-                            <span class="tag">响应式布局</span>
-                            <span class="tag">单位换算</span>
                         </div>
                     </div>
                 </div>
@@ -552,10 +540,10 @@
                             产品原型项目，围绕任务发布、筛选搜索、详情弹窗、交付记录和质量标准组织页面。
                         </p>
                         <div class="project-tags">
-                            <span class="tag">产品原型</span>
-                            <span class="tag">筛选搜索</span>
+                            <span class="tag highlight">表单验证</span>
+                            <span class="tag">状态管理</span>
                             <span class="tag">弹窗交互</span>
-                            <span class="tag">静态部署</span>
+                            <span class="tag">LocalStorage</span>
                         </div>
                     </div>
                 </div>
@@ -587,25 +575,6 @@
                         </a>
                     </div>
                 </div>
-                <form class="contact-form glass" id="contact-form">
-                    <div class="form-group">
-                        <label for="name">姓名</label>
-                        <input type="text" id="name" name="name" placeholder="您的姓名" />
-                    </div>
-                    <div class="form-group">
-                        <label for="email">邮箱</label>
-                        <input type="email" id="email" name="email" placeholder="your@email.com" />
-                    </div>
-                    <div class="form-group">
-                        <label for="message">消息</label>
-                        <textarea id="message" name="message" rows="5" placeholder="请输入您的留言..."></textarea>
-                    </div>
-                    <a href="mailto:1104557016@qq.com" class="btn btn-primary btn-glow btn-full">
-                        <span>发送邮件</span>
-                        <span class="btn-icon">→</span>
-                    </a>
-                    <p class="form-hint">点击后将通过邮件客户端发送，或直接发送至 1104557016@qq.com</p>
-                </form>
             </div>
         </div>
     </section>

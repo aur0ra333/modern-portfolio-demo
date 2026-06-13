@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>申浩天 - 个人简历</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ink: #17202a;
+            --muted: #667085;
+            --line: #d9e2ec;
+            --blue: #2563eb;
+            --green: #0f9f6e;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: "Source Sans 3", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+            color: var(--ink);
+            background: #f6f8fb;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3 { font-family: Chivo, "Source Sans 3", sans-serif; }
+        .page {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 56px 64px;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(23,32,42,0.08);
+        }
+        .no-print { text-align: center; margin-bottom: 20px; }
+        .no-print button {
+            background: var(--ink);
+            color: #fff;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            cursor: pointer;
+            font-family: inherit;
+        }
+        .no-print button:hover { opacity: 0.9; }
+        .no-print a { color: var(--muted); margin-left: 16px; font-size: 0.88rem; }
+        .header { border-bottom: 2px solid var(--ink); padding-bottom: 20px; margin-bottom: 28px; }
+        .header h1 { font-size: 2rem; }
+        .header .sub { color: var(--muted); font-size: 1rem; margin-top: 4px; }
+        .header .contact-row { display: flex; gap: 20px; margin-top: 10px; font-size: 0.88rem; color: var(--muted); flex-wrap: wrap; }
+        .section { margin-bottom: 24px; }
+        .section h2 { font-size: 1.1rem; border-bottom: 1px solid var(--line); padding-bottom: 6px; margin-bottom: 12px; }
+        .item { margin-bottom: 14px; }
+        .item .head { display: flex; justify-content: space-between; flex-wrap: wrap; }
+        .item .head strong { font-size: 0.96rem; }
+        .item .head span { color: var(--muted); font-size: 0.85rem; }
+        .item .sub { color: var(--muted); font-size: 0.85rem; margin-bottom: 4px; }
+        .item ul { padding-left: 18px; color: var(--muted); font-size: 0.88rem; }
+        .item ul li { margin-bottom: 2px; }
+        .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+        .tags span {
+            background: #eef3f8; padding: 3px 10px; border-radius: 6px;
+            font-size: 0.78rem; color: var(--muted);
+        }
+        .highlight { color: var(--green); font-weight: 600; }
+        @media print {
+            body { background: #fff; }
+            .page { box-shadow: none; margin: 0; padding: 0; max-width: 100%; }
+            .no-print { display: none; }
+            @page { margin: 20mm; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="no-print">
+    <button onclick="window.print()">打印 / 保存为 PDF</button>
+    <a href="index.html">← 返回作品集</a>
+</div>
+
+<div class="page">
+    <div class="header">
+        <h1>申浩天</h1>
+        <p class="sub">前端开发 / Java 后端 · 河南师范大学 计算机科学与技术 2026 届</p>
+        <div class="contact-row">
+            <span>📧 1104557016@qq.com</span>
+            <span>💻 github.com/aur0ra333</span>
+            <span>📍 河南新乡</span>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>求职意向</h2>
+        <p style="font-size:0.92rem; color: var(--muted);">
+            前端开发工程师 / Java 后端开发工程师，期望参与 Web 应用的全流程开发，也可承担全栈协作。
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>教育背景</h2>
+        <div class="item">
+            <div class="head"><strong>河南师范大学</strong><span>2022.09 - 2026.06</span></div>
+            <div class="sub">计算机科学与技术 · 本科</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>实习经历</h2>
+        <div class="item">
+            <div class="head"><strong>杭州市正方软件股份有限公司</strong><span>2025.03 - 2025.06</span></div>
+            <div class="sub">实施工程师（实习生）</div>
+            <ul>
+                <li>参与高校教务管理系统前端页面开发，独立完成课程表、个人中心和后台面板等模块</li>
+                <li>使用 Vue.js + Element UI 构建页面，处理 Axios 请求封装和 Token 认证逻辑</li>
+                <li>实现 ECharts 图表、趋势分析和状态看板的数据可视化功能</li>
+                <li>与后端协作完成接口联调和数据交互，确保页面功能正常运转</li>
+            </ul>
+            <div class="tags"><span>Vue.js</span><span>Element UI</span><span>Axios</span><span>ECharts</span></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>项目经历</h2>
+        <div class="item">
+            <div class="head"><strong>Markdown 文档工作台</strong><span>个人项目</span></div>
+            <ul>
+                <li>基于原生 JavaScript + Marked.js 构建的 Markdown 编辑器，支持实时预览和代码语法高亮</li>
+                <li>实现撤销/重做栈（100 条历史）、本地文档库 CRUD、版本历史（每 30s 自动保存）</li>
+                <li>支持 .md/.txt 文件导入、搜索替换（含正则）、目录生成和 MD/HTML/PDF 多格式导出</li>
+            </ul>
+            <div class="tags"><span>JavaScript</span><span>Marked.js</span><span>highlight.js</span><span>LocalStorage</span></div>
+        </div>
+        <div class="item">
+            <div class="head"><strong>运营数据看板</strong><span>个人项目</span></div>
+            <ul>
+                <li>使用 Chart.js 构建数据可视化仪表板，含趋势折线图、分布饼图、柱状图和转化漏斗</li>
+                <li>实现 200 条动态订单数据生成、时间/渠道多维筛选联动和环比变化率实时计算</li>
+                <li>支持订单表格排序分页、行展开详情、CSV 导出、侧边栏多视图切换和数据刷新</li>
+            </ul>
+            <div class="tags"><span>JavaScript</span><span>Chart.js</span><span>数据可视化</span><span>CSV导出</span></div>
+        </div>
+        <div class="item">
+            <div class="head"><strong>任务看板 + 城市天气观察台 + 博客系统 + 任务协作实验室</strong><span>个人项目</span></div>
+            <ul>
+                <li>任务看板：支持看板拖拽、任务 CRUD、截止日期倒计时、批量操作和完成趋势统计</li>
+                <li>天气应用：接入 Open-Meteo 免费 API，支持全球城市搜索、地理定位、逐小时预报和舒适度计算</li>
+                <li>博客系统：15 篇文章 + 全文搜索 + 分页 + 分类标签自动同步 + 阅读量统计</li>
+                <li>任务协作实验室：完整任务流转（发布→认领→交付→审核→归档）+ LocalStorage 持久化</li>
+            </ul>
+            <div class="tags"><span>JavaScript</span><span>API集成</span><span>LocalStorage</span><span>HTML5 Drag & Drop</span></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>毕设项目</h2>
+        <div class="item">
+            <div class="head"><strong>Spring Boot 在线电影播放平台</strong><span>毕业设计</span></div>
+            <ul>
+                <li>基于 Spring Boot + MySQL + Redis 构建后端，实现视频流播放、用户系统、评论和收藏功能</li>
+            </ul>
+            <div class="tags"><span>Java</span><span>Spring Boot</span><span>MySQL</span><span>Redis</span></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>技能</h2>
+        <div class="tags" style="margin-top: 0;">
+            <span>JavaScript / ES6+</span><span>HTML5 / CSS3</span><span>Vue.js</span><span>React</span>
+            <span>Java</span><span>Spring Boot</span><span>Node.js</span><span>MySQL</span>
+            <span>Redis</span><span>Git</span><span>RESTful API</span><span>ECharts</span>
+            <span>Chart.js</span><span>Axios</span><span>JWT</span>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

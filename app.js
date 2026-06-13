@@ -1,16 +1,4 @@
 // ====================
-// 简历下载按钮
-// ====================
-
-const btnResume = document.getElementById('btn-resume');
-if (btnResume) {
-    btnResume.addEventListener('click', (e) => {
-        e.preventDefault();
-        alert('简历文件暂未上传，请通过邮箱 1104557016@qq.com 联系获取。');
-    });
-}
-
-// ====================
 // 平滑滚动
 // ====================
 
