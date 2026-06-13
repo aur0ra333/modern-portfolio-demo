@@ -28,6 +28,26 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ====================
+// 项目总览卡片 - 点击跳转并筛选
+// ====================
+
+document.querySelectorAll('.overview-card').forEach(card => {
+    card.addEventListener('click', () => {
+        const filter = card.getAttribute('data-filter');
+        // 滚动到项目区
+        const projectsSection = document.getElementById('projects');
+        if (projectsSection) {
+            projectsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        // 触发对应筛选项
+        const targetBtn = document.querySelector(`.filter-btn[data-filter="${filter}"]`);
+        if (targetBtn) {
+            setTimeout(() => targetBtn.click(), 400);
+        }
+    });
+});
+
+// ====================
 // 导航栏激活状态
 // ====================
 
